@@ -24,32 +24,44 @@
           </p>
           <p>You <i>know</i> you want to.</p>
         </div>
-        <form>
-          <legend>Let's do this!</legend>
-          <div class="fieldsetContainer">
-                      <fieldset>
-            <label for="firstName">FIRST NAME</label>
-            <input type="text" for="firstName" id="firstName" />
-            <label for="userMail">EMAIL</label>
-            <input type="email" name="lastName" id="lastName" />
-            <label for="userPassword">PASSWORD</label>
-            <input type="password" name="userPassword" id="userPassword" />
-          </fieldset>
+        <form id="userdata">
           <fieldset>
-            <label for="lastName">LAST NAME</label>
-            <input type="text" name="lastName" id="lastName" />
-            <label for="userPhoneNr">PHONE NUMBER</label>
-            <input type="tel" name="userPhoneNr" id="userPhoneNr" />
-            <label for="confirmPassword">CONFIRM PASSWORD</label>
-            <input
-              type="password"
-              name="confirmPassword"
-              id="confirmPassword"
-            />
+            <legend>Let's do this!</legend>
+            <div class="input_combo">
+              <label for="firstName">FIRST NAME</label>
+              <input type="text" for="firstName" id="firstName" />
+            </div>
+            <div class="input_combo">
+              <label for="lastName">LAST NAME</label>
+              <input type="text" name="lastName" id="lastName" />
+            </div>
+            <div class="input_combo">
+              <label for="userMail">EMAIL</label>
+              <input type="email" name="userMail" id="userMail" />
+            </div class="input_combo">
+            <div class="input_combo">
+              <label for="userPhoneNr">PHONE NUMBER</label>
+              <input type="tel" name="userPhoneNr" id="userPhoneNr" />
+            </div>
+            <div class="input_combo">
+              <label for="userPassword">PASSWORD</label>
+              <input type="password" name="userPassword" id="userPassword" required/>
+            </div>
+            <div class="input_combo">
+              <label for="confirmPassword">CONFIRM PASSWORD</label>
+              <input
+                type="password"
+                name="confirmPassword"
+                id="confirmPassword"
+                required
+              />
+            </div>
           </fieldset>
-          </div>
         </form>
-        <div class="Submit"></div>
+        <div class="submit_panel">
+          <button form="userdata" class="btn_submit" type="submit">Create Account</button>
+          <p>Already have an account? <a href="index.html">Log in</a></p>
+        </div>
       </div>
     </div>
   </body>

@@ -4,6 +4,10 @@
   font-family: "Roboto";
 }
 
+:root {
+  --padding: 2em;
+}
+
 .body {
   display: flex;
   height: 100dvh;
@@ -27,9 +31,10 @@
 .form_panel {
   background-color: rgb(245, 245, 245);
   width: 67vw;
+  max-width: 67vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .logo_banner {
@@ -52,40 +57,82 @@
 
 form {
   background-color: white;
-  display: flex;
-  flex-direction: column;
+  margin: 5em 0em;
+  filter: drop-shadow(0px 5px 1px silver);
 }
 
-.fieldsetContainer {
-    display: flex;
-    flex: auto;
-    justify-content: space-evenly;
-    gap: 1em;
-    }
-
 fieldset {
-    width: 50%;
-    padding: 0 2em 0 2em;
-    border-style: none;
-    display: flex;
-    flex-direction: column;
+  border-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: var(--padding);
 }
 
 label {
-    font-size: 0.7em;
-    display: block;
-    color: rgb(10, 10, 10);
+  font-size: 0.7em;
+  display: block;
+  color: rgb(10, 10, 10);
 }
 input {
-    margin-bottom: 2rem;
-    border-radius: .4rem;
-    border-width: 1px;
-    font-size: 1.5em;
+  margin-bottom: 2rem;
+  border-radius: 0.4rem;
+  border-width: 1px;
+  font-size: 1em;
+  padding: 0.25em;
+  width: 100%;
 }
 legend {
-    padding: 1em 2em; 
-    font-size: larger;
-    font-weight: bold;
+  padding: 1em 0;
+  font-size: larger;
+  font-weight: bold;
 }
 
+.callToAction,
+fieldset {
+  padding: 0 var(--padding) 0 var(--padding);
+}
 
+.input_combo {
+  width: max(250px, calc(50% - var(--padding)));
+}
+
+.submit_panel {
+  padding: 0 var(--padding);
+  position: relative;
+  top: 0px;
+}
+
+.btn_submit {
+  background-color: orangered;
+  color: white;
+  padding: 1em var(--padding);
+  border-style: none;
+  border-radius: 0.75em;
+  font-weight: bold;
+  margin-bottom: 2em;
+  filter: drop-shadow(5px 5px 5px silver);
+}
+
+a {
+  color: orangered;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+input[type="password"]:invalid {
+  border-color: red;
+}
+
+input:focus {
+  border: 1pt solid steelblue;
+  outline: none;
+}
+
+.callToAction > p {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.callToAction > p:first-child {
+  margin-bottom: 0.75em;
+}
